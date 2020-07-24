@@ -451,8 +451,8 @@ from numpy import asarray
 from PIL import Image
 for n, id_ in tqdm(enumerate(test_img_fnames), total=len(test_img_fnames)):
     #path = base_dir
-    #img = imread(path + '20klabels/ShortAxis/' + id_) # read the image
-    img = imread('/media/kiara/My Passport/TestSet/label/ShortAxis/' + id_)
+    img = imread(path + 'SCCOR_labels/ShortAxis/' + id_) # read the image
+    #img = imread('/media/kiara/My Passport/HELIX/label/ShortAxis/' + id_)
     pixels=asarray(img).astype('float32')
     pixels = resize(pixels, (IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), mode = 'constant', preserve_range = True)
     
